@@ -1,0 +1,44 @@
+.categories1-div{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 5%; */
+    /* justify-content: space-around; */
+}
+
+
+
+/* .card-button {
+    margin-bottom: 10px;
+}*/
+
+.linkStyle {
+    text-decoration: none;
+} 
+
+/* .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    flex: 1;
+} */
+
+.wrap-product{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.product-name{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* color: aqua; */
+}
+
+.colu2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}

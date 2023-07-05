@@ -1,0 +1,43 @@
+.form-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.login{
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+    gap: 20;border-style: solid;
+}
+
+.login-btn{
+    width: 100px;
+    height: 50px;
+    background-color: coral;
+    color: rgb(5, 3, 0);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-style:solid;
+}
+
+.register{
+    border: 1px solid rgba(247, 193, 47, 0.801);
+    height: 400px;
+    width: 600px;
+    margin-top: 20px;
+    /* box-shadow: 2px 2px 5px 10px #d6d5d5; */
+    /* box-shadow: 0 0 0 0.6rem   #d6d5d5; */
+    /* box-shadow: 0 0 0 0.02rem rgba(248, 202, 74, 0.801); */
+}
+
+.register:hover{
+    border-color: #dea14d; /* Change the border color on hover */
+    border-width: .05px; /* Reduce the border thickness on hover */
+    background-color: #f5faff; /* Change the background color on hover */
+    box-shadow: 0 0 0 0.02rem rgba(248, 202, 74, 0.801);
+}
+

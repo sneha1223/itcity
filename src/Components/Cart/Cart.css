@@ -1,0 +1,8 @@
+.remove-btn{
+    width: 125px;
+    height: 50px;
+    background-color: rgb(3, 3, 39);
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+}
