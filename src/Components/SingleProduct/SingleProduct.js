@@ -54,8 +54,8 @@ function SingleProduct() {
                         return (
                             <div>
                                 <Link className='linkStyle' to={`/product/${val.product_id}`} key={val?.id}>
-                                    <div class="col-6">
-                                        <Card style={{ width: '18rem'}} >
+                                    <div class="col-6 ">
+                                        <Card style={{ width: '25rem',marginTop: "20px"}} >
                                             <Card.Img  variant="top" src={thumbImgUrl + val.product_image} />
                                             <Card.Text><h1 className='product-name'>{val.product_name} </h1></Card.Text>
                                             <Card.Text><h2 className='price' style={{ textDecoration: "line-through" }}>${val.product_price.toFixed(3)}/- </h2></Card.Text>
@@ -65,7 +65,7 @@ function SingleProduct() {
                                 </Link>
                             
                     <div class='col-6'>
-                        <h2 className='quantity'>Quantity</h2>
+                        {/* <h2 className='quantity'>Quantity</h2> */}
                         <div className='cart'>
                             <button className='activity' onClick={decreaseProductQty}>-</button>
                             <h2 style={{ marginLeft: "10px" }}> {productQty} </h2>

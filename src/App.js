@@ -10,6 +10,8 @@ import Ordrer from './Components/Order/Ordrer';
 import Register from './Components/Register/Register';
 import Signin from './Components/Signin/Signin';
 import Login from './Components/Login/Login';
+import UserDetails from './Components/UserDetails/UserDetails';
+
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
         <Route path='/register' element={ <Register /> }></Route>
         <Route path='/signin' element={ <Signin />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/userDetails' element={ <UserDetails /> }></Route>
       </Routes>
 
     </div>

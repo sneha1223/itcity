@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import './Register.css'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,6 +18,7 @@ const Register = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+       
         axios.post('https://itcity.tectuz.com/api/register', formData)
             .then(response => {
                 console.log("response", response.data)
@@ -23,7 +26,9 @@ const Register = () => {
             .catch(error => {
                 console.log("error", error);
             })
+            navigate('/'); 
     }
+    
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -38,7 +43,7 @@ const Register = () => {
 
     return (
         <center>
-            <h2>Login </h2>
+            {/* <h2>Login </h2> */}
             <div className='register shadow p-5'>
                 <form onSubmit={handleSubmit} className='form-div'>
                     <input
