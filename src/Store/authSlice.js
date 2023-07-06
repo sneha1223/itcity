@@ -19,28 +19,54 @@ export const registration = createAsyncThunk(
 
 );
 
+// export const login = createAsyncThunk(
+//     "auth/login",
+//     async ({ customer_email, password }) => {
+//         try {
+//             const config = {
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//             }
+//             const response = await API_CLIENT.post({ customer_email, password }, config)
+//             const token = await response.data.token;
+//             console.log("token", token);
+//             localStorage.setItem('token', token);
+//             localStorage.setItem('token', JSON.stringify(token))
+//             const user = response.data.user;
+
+//             localStorage.setItem('user', user);
+//             localStorage.setItem('user', JSON.stringify(user))
+//             return { token, user };
+
+//         } catch (error) {
+//             throw new Error(error.response.data.message)
+//         }
+//     }
+// );
+
 export const login = createAsyncThunk(
     "auth/login",
-    async ({ customer_email, password },) => {
+    async ({ customer_name, password }) => {
         try {
             const config = {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             }
-            const response = await API_CLIENT.post({ customer_email, password }, config)
+            const response = await API_CLIENT.post({ customer_name, password }, config)
             const token = await response.data.token;
             console.log("token", token);
-            localStorage.setItem('token', token);
-            localStorage.setItem('token', JSON.stringify(token))
+            localStorage.setItem("token", token);
+            localStorage.setItem('token', JSON.stringify(token));
             const user = response.data.user;
 
-            localStorage.setItem('user', user);
-            localStorage.setItem('user', JSON.stringify(user))
-            return { token, user };
+            localStorage.setItem("user", user);
+            localStorage.setItem("user", JSON.stringify(user))
 
+            return { token, user };
         } catch (error) {
-            throw new Error(error.response.data.message)
+             throw new Error(error.response.data)
         }
     }
 );
@@ -109,3 +135,4 @@ export const getUser = (state) => state.auth.user;
 export const getToken = (state) => state.auth.token;
 export const getuserDetails = (state) => state.auth.userDetails;
 export default authSlice.reducer
+

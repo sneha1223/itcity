@@ -19,7 +19,7 @@ function Cart() {
             {cartItem.map((val) => {
               return (
                 <>
-                  <Card className='mt-4'>
+                  <Card className='mt-4' style={{height:"35rem"}}>
                     <div class='img-col d-flex text-center'>
                       <img src={thumbImgUrl + val.product_image} alt='' />
                     </div>
@@ -46,8 +46,8 @@ function Cart() {
                   <table>
                     <tbody>
                       <tr>
-                        <td>Actual Amount: </td>
-                        <td>{val.product_price} </td>
+                      <td>Actual Amount: </td>
+                      <td>{val.product_price} </td>
                       </tr>
 
                       <tr>
@@ -56,10 +56,13 @@ function Cart() {
                       </tr>
                     </tbody>
                   </table>
+                  <Link to='/order'> <button>Proceed to Buy</button></Link>
                 </div>
+                 
               )
+             
             })}
-            <Link to='/order'> <button>Proceed to Buy</button></Link>
+            
           </div>
 
         </div>

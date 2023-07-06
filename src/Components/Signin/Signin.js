@@ -6,7 +6,7 @@ import { Button } from '@mui/material'
 const Signin = () => {
     return (
         <center>
-            <div className='sign-div' >
+            <div className='sign-div p-4' >
                 <form className='signin-form'>
                     <input
                         className='signin'

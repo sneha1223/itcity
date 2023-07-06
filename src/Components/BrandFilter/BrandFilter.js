@@ -276,7 +276,7 @@ export default function BrandFilter() {
     <div className='mt-4'>
          {BrandData.map((vaal)=>{
                   return(
-                           <>
+                           
                            <div className='checkboxes'>
                              <label>
                                <input
@@ -288,7 +288,7 @@ export default function BrandFilter() {
                                /> {vaal.brands_name}
                              </label><br></br>
                            </div>
-                         </>
+                        
                   )
          })}
     </div>

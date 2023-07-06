@@ -9,6 +9,7 @@ import Cart from './Components/Cart/Cart';
 import Ordrer from './Components/Order/Ordrer';
 import Register from './Components/Register/Register';
 import Signin from './Components/Signin/Signin';
+import Login from './Components/Login/Login';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/order' element={<Ordrer />}></Route>
         <Route path='/register' element={ <Register /> }></Route>
         <Route path='/signin' element={ <Signin />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
 
     </div>
