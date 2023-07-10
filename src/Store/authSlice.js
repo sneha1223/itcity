@@ -47,7 +47,7 @@ export const registration = createAsyncThunk(
 
 export const login = createAsyncThunk(
     "auth/login",
-    async ({ customer_name, password }) => {
+    async ({ customer_name, password },) => {
         try {
             const config = {
                 headers: {
@@ -55,12 +55,14 @@ export const login = createAsyncThunk(
                 },
             }
             const response = await API_CLIENT.post({ customer_name, password }, config)
+            
             const token = await response.data.token;
             console.log("token", token);
+
             localStorage.setItem("token", token);
             localStorage.setItem('token', JSON.stringify(token));
-            const user = response.data.user;
 
+            const user = response.data.user;
             localStorage.setItem("user", user);
             localStorage.setItem("user", JSON.stringify(user))
 

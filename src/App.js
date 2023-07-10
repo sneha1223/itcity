@@ -11,17 +11,20 @@ import Register from './Components/Register/Register';
 import Signin from './Components/Signin/Signin';
 import Login from './Components/Login/Login';
 import UserDetails from './Components/UserDetails/UserDetails';
-
+import Top from './Components/Navbar/Top'
+// import Cat from './Components/Categories/Cat';
 
 
 function App() {
   return (
     <div className="App">
-      <Topbar />
+      {/* <Topbar /> */}
+      <Top />
       
       <Routes>
         <Route path='/' element={<Banner /> }></Route>
         <Route path='/category/:category_id' element={<Categories />}></Route>
+        {/* <Route path='/category/:category_id' element={<Cat />}></Route> */}
         <Route path='/product/:product_id' element={<SingleProduct />}></Route>
         <Route path='/cart' element={ <Cart />}></Route>
         <Route path='/order' element={<Ordrer />}></Route>
