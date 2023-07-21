@@ -1,40 +1,17 @@
 .categories1-div{
     display: flex;
     flex-wrap: wrap;
-    /* gap: 5%; */
-    /* justify-content: space-around; */
 }
-
-
-
-/* .card-button {
-    margin-bottom: 10px;
-}*/
 
 .linkStyle {
     text-decoration: none;
 } 
 
-/* .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.card {
-    flex: 1;
-} */
-
-.wrap-product{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-}
-
-.product-name{
+.card-title p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* color: aqua; */
+    font-size: 50px;
+    color: rgb(18, 19, 18);
 }
 
 .colu2{
@@ -42,3 +19,36 @@
     flex-wrap: wrap;
     gap: 5%;
 }
+div.card:hover{
+    transform: scale(1.01); 
+    box-shadow: 0 5px 38px -6px #cfc1c1;
+
+}
+
+.offer_price{
+    color: #fc7c00;
+    font-size: 20px;
+}
+
+.price{
+    color: black;
+    
+}
+
+.btn1.btn{
+    background-color: black !important;
+    color: #ffff;
+    width: 225px !important;
+}
+
+.hidden-button {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    visibility: hidden; /* Initially hidden */
+  }
+  
+  .container:hover .hidden-button {
+    visibility: visible; /* Show the button on hover */
+  }

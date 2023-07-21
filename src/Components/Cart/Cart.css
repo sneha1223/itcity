@@ -1,8 +1,39 @@
-.remove-btn{
+.main-cart {
+    display: flex;
+    justify-content: left;
+    flex-direction: column; 
+}
+
+.remove-btn {
     width: 125px;
     height: 50px;
-    background-color: rgb(16, 16, 155);
+    background-color: black;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.cart-img {
+    width: 30%;
+    margin-top: 30px;
+}
+
+.cart-div {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.cart-details {
+    margin-top: 30px;
+}
+
+.cart-name {
+    text-align: start;
+}
+
+.cart-price {
+    font-size: 18px;
+    text-align: start;
 }

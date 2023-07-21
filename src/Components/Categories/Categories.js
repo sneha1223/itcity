@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllProduct, getAllProduct } from '../../Store/categorySlice'
+import { addToCart } from '../../Store/cartSlice'
 import { Card, Button } from 'react-bootstrap'
 import { thumbImgUrl } from '../../Constants'
 import { Link, useParams } from 'react-router-dom'
@@ -35,7 +37,13 @@ const Categories = () => {
 
   useEffect(() => {
     dispatch(setSelectedData(allProduct.filter(item => selectedBrands.includes(parseInt(item.product_brand)))))
-  }, [selectedBrands,dispatch,allProduct])
+  }, [selectedBrands, dispatch, allProduct])
+
+  const [productQty, setProductQty] = useState(1);
+  const addToCartHandler = (ProductSingle) => {
+    let totalPrice = productQty * ProductSingle?.product_price_offer;
+    dispatch(addToCart({ ...ProductSingle, product_qty: productQty, totalPrice: totalPrice }));
+  }
 
 
   return (
@@ -48,20 +56,20 @@ const Categories = () => {
           <div className='wrap-product'>
             {selectedData.length > 0 ? (
               <div className='colu2'>
+
                 {selectedData.map((val) => {
                   return (
-                    <div>
+                    <div className='card-style'>
                       <Link className='linkStyle' to={`/product/${val.product_id}`} key={val?.id}>
-                        <Card style={{ width: '19rem' }} className='mt-4'>
+                        <Card style={{ width: '19rem', border: 'none', marginTop: "30px" }} className='product-card'>
                           <Card.Img variant="top" src={thumbImgUrl + val.product_image} />
                           <Card.Body>
 
-                            <Card.Title className='product-name'>{val.product_name}</Card.Title>
+                            <Card.Title className='card-title'><p >{val.product_name}</p></Card.Title>
                             <Card.Text className='offer_price' style={{ textAlign: "center" }}>KWD {val.product_price_offer.toFixed(3)}</Card.Text>
                             <Card.Text className='price' style={{ textAlign: "center", textDecoration: "line-through" }}>KWD {val.product_price.toFixed(3)}</Card.Text>
                             <div className='btnnnn'>
-                              <Button className='btn1' variant="primary">View</Button>
-                            </div>
+                              <Link to='/product/:product_id'><Button className='hidden-button btn1' variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button> </Link>                            </div>
                           </Card.Body>
                         </Card>
                       </Link>
@@ -73,15 +81,15 @@ const Categories = () => {
               <div className='colu2'>
                 {allProduct.map((val) => {
                   return (
-                    <div>
+                    <div className='card-style'>
                       <Link className='linkStyle' to={`/product/${val.product_id}`} key={val?.id}>
-                        <Card style={{ width: '19rem' }}>
+                        <Card style={{ width: '19rem', border: 'none', marginTop: "30px" }}>
                           <Card.Img variant="top" src={thumbImgUrl + val.product_image} />
                           <Card.Body>
                             <Card.Title>{val.product_name}</Card.Title>
                             <Card.Text className='offer_price' style={{ textAlign: "center" }}>KWD {val.product_price_offer.toFixed(3)}</Card.Text>
-                            <Card.Text>{val.country}<span style={{ textAlign: "center", textDecoration: "line-through" }}>{val.product_price.toFixed(3)}</span> </Card.Text>
-                            <Button className='btn1' variant="primary">View</Button>
+                            <Card.Text className='price' style={{ textAlign: "center", textDecoration: "line-through" }}>{val.country}<span style={{ textAlign: "center", textDecoration: "line-through" }}>{val.product_price.toFixed(3)}</span> </Card.Text>
+                            <Button className='hidden-button btn1' variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button>
                           </Card.Body>
                         </Card>
                       </Link>
@@ -97,7 +105,6 @@ const Categories = () => {
       </div>
 
     </div>
-    //  </div>
   )
 }
 

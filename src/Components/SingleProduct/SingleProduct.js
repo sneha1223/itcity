@@ -3,7 +3,7 @@ import './SingleProduct.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchSingleProduct, getSingleProduct } from '../../Store/categorySlice';
 import { useParams } from 'react-router-dom';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Col,Row } from 'react-bootstrap';
 import { thumbImgUrl } from '../../Constants';
 import { Link } from 'react-router-dom';
 import { addToCart } from '../../Store/cartSlice';
@@ -47,39 +47,38 @@ function SingleProduct() {
 
 
     return (
-        <div>
-            <div class="container">
-                <div class="row">
-                    {singleProduct.map((val) => {
-                        return (
-                            <div>
-                                <Link className='linkStyle' to={`/product/${val.product_id}`} key={val?.id}>
-                                    <div class="col-6 ">
-                                        <Card style={{ width: '25rem',marginTop: "20px"}} >
-                                            <Card.Img  variant="top" src={thumbImgUrl + val.product_image} />
-                                            <Card.Text><h1 className='product-name'>{val.product_name} </h1></Card.Text>
-                                            <Card.Text><h2 className='price' style={{ textDecoration: "line-through" }}>${val.product_price.toFixed(3)}/- </h2></Card.Text>
-                                            <Card.Text><h2 className='price'>${val.product_price_offer.toFixed(3)}/- </h2></Card.Text>
-                                        </Card>
-                                    </div>
-                                </Link>
-                            
-                    <div class='col-6'>
-                        {/* <h2 className='quantity'>Quantity</h2> */}
-                        <div className='cart'>
-                            <button className='activity' onClick={decreaseProductQty}>-</button>
-                            <h2 style={{ marginLeft: "10px" }}> {productQty} </h2>
-                            <button className='activity' onClick={increaseProductQty}>+</button>
-                            </div>
-                            <Link to='/cart'><Button className='cart-btn1' onClick={() => {addToCartHandler(val)}}  >Add to Cart</Button> </Link>
-                       </div>
-                       </div>
-         
-               
-                        )
-                    })}
-                </div>
-            </div>
+        <div className='product-container'>
+            {singleProduct.map((val)=>{
+                return(
+                    
+<div className='product-details'>
+    <Row>
+        <Col xs={1}></Col>
+        <Col xs={4}>
+        <div style={{ width: '25rem',marginTop: "20px", border: "none"}} >
+            <img  variant="top" src={thumbImgUrl + val.product_image} alt='' />
+        </div>
+        </Col>
+
+        <Col xs={6}>
+        <div style={{ marginTop: "55px", border: "none",}} >
+        <h1 className='single-product-name'>{val.product_name} </h1>
+        <h2 className='single-price' style={{ textDecoration: "line-through" }}>KWD ${val.product_price.toFixed(3)}/- </h2>
+        <h2 className='single-price-offer'>KWD ${val.product_price_offer.toFixed(3)}/- </h2>
+       <Link to='/cart'><Button className='single-cart-btn' onClick={() => {addToCartHandler(val)}} variant='dark'>Add To Cart</Button></Link> 
+        </div>
+        <div className='cart-btn-grp'>
+        <Button variant='dark' onClick={decreaseProductQty}>-</Button>
+            <h2 style={{ marginLeft: "10px" }}> {productQty} </h2>
+        <Button  variant='dark' onClick={increaseProductQty}>+</Button>
+        </div>
+        </Col>
+        <Col xs={1}></Col>
+    </Row>
+
+</div>
+ )
+    })}
         </div>
 
 

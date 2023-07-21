@@ -42,9 +42,9 @@ const Signin = () => {
                         placeholder='Password'
                     />
                 
-                    <Button className='signin-btn' variant="contained">Login</Button>
+                    {/* <Button className='signin-btn' variant="contained">Login</Button> */}
                     
-                    {/* <button className='signin-btn'>Sign In</button> */}
+                    <button className='signin-btn'>Sign In</button>
                 </form>
 
                 <p>Don't You have an account?<Link to='/register'> Sign Up</Link>  </p>

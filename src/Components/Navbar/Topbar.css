@@ -1,70 +1,31 @@
-/* .topbar-div{
-    background-color: rgb(210, 210, 233);
-    width: 100%;
-    height: 80px;
-    margin: 0;
-}
-
-.bag{
-    width: 60px;
-  
-}
-
-.heading.navbar-brand{
-    font-size: 45px!important;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 800 !important;
-    margin-left: 2px !important;
- 
-}
-
-.heading.navbar-brand:hover{
-    color: aliceblue;
-}
-
-.nav-items{
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-    font-weight: 400;
-}
-
-.nav-items:hover{
-    color: wheat;
-}
-
-
-#basic-navbar-nav{
+.logo-image {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+  }
+  .topbar-main{
+    /* color:rgba(237, 128, 45, 0.852); */
+    background-color: #fc7c00;
+  }
+  .navbar-brand {
+    display: flex;
     align-items: center;
-    margin-left: 10%;
-    margin-top: 2%;
-}
-
-.navbar{
-    background-color: #fd7f00;
-} */
-
-
-.heading{
-   display: flex;
-   margin-top: 17px;
-}
-
-.bag{
-    width: 60px;
-    margin-bottom: 74px;
-}
-
-.nav-items{
-    text-decoration: none;
+  
+  }
+  
+  /* Topbar.css */
+  .nav-link-texts {
     color: white;
-    margin-left: 15px;
-    margin-top: 68px;
-}
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+    background-color: rgba(137, 67, 9, 0.082); /* Add a background color on hover */
+    border-radius: 5px; /* Add rounded corners */
+    text-decoration: none; /* Remove underline on hover */
+  }
 
-.cart-icon{
+  .cart-icon{
     position: relative;
     margin-right: 10px;
 }
@@ -77,4 +38,16 @@
     background-color: rgb(229 31 159);
     height: 26px;
     width: 24px;
+} 
+
+.search-box {
+  width: 80rem;
+  height: 40px;
+  border: 1px none;
+  border-radius: 15px;
+  margin-left: 5px;
+}
+
+#navbar-nav.nav-items {
+  margin-left: 158px;
 }

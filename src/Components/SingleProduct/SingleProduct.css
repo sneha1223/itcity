@@ -1,50 +1,87 @@
-.container{
+.container {
     display: flex;
     flex-direction: row;
     gap: 5%;
 }
-.container-details{
+
+.container-details {
     display: flex;
     justify-content: right;
     flex-direction: column;
 }
 
 
-.cart{
+.cart {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 56px;
 }
 
-button.cart-btn1{
-    width: 188px;
-    height: 82px;
-    background-color: rgb(9, 9, 117);
+button.cart-btn1 {
+    width: 170px;
+    height: 70px;
+    background-color: #1976d2;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
 }
 
-.cart-btn:hover{
-    background-color: rgb(1, 1, 59);
+.cart-btn:hover {
+    background-color: rgb(7, 7, 49);
 }
 
-.activity{
+.activity {
     width: 25px;
     border-radius: 5px;
     margin-left: 5px;
-    background-color: rgb(14, 40, 156);
+    background-color: #1976d2;
     color: white;
 }
 
-.quantity{
+.quantity {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
 }
-.qty-div{
+
+.qty-div {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 280px;
+}
+
+.single-product-name {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: start;
+}
+
+.single-price {
+    font-size: 20px;
+    text-align: start;
+    font-weight: 400;
+}
+
+.single-price-offer {
+    font-size: 30px;
+    text-align: start;
+    font-weight: 800;
+    color: #fc7c00;
+    font-family: 'Times New Roman', Times, serif;
+}
+.single-div {
+    display: flex;
+    flex-direction: column;
+}
+
+button.single-cart-btn {
+   display: flex;
+   text-decoration: none;
+}
+
+.cart-btn-grp {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
 }

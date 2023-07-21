@@ -3,7 +3,8 @@ import './Cart.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllCarts, removeItem } from '../../Store/cartSlice';
 import { thumbImgUrl } from '../../Constants';
-import { Card } from 'react-bootstrap';
+import {Row,Col} from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Cart() {
@@ -12,8 +13,8 @@ function Cart() {
   console.log("cart item", cartItem);
 
   return (
-    <div>
-      <div class='container'>
+    <div className='main-cart'>
+      {/* <div class='container'>
         <div class='row'>
           <div class='img-col1 mt-5 col-6'>
             {cartItem.map((val) => {
@@ -29,7 +30,9 @@ function Cart() {
                       <h4> Total Price: {val.totalPrice.toFixed(3)} KWD </h4>
                       <button onClick={() =>
                         dispatch(removeItem(val.id))} className='remove-btn'>Remove </button>
+                           <Link to='/order'> <button className='remove-btn'>Proceed to Buy</button></Link>
                     </div>
+                    
                   </Card>
                 </>
               )
@@ -66,7 +69,32 @@ function Cart() {
           </div>
 
         </div>
-      </div>
+      </div> */}
+      {/* <div className='cart-div'> */}
+      {cartItem.map((val)=>{
+        return (
+          <div>
+            <Row>
+              <Col xs={12} md={6}>
+              <img className='cart-img' src={thumbImgUrl + val.product_image} />
+              </Col>
+
+              <Col xs={12} md={6} className='mt-4'>
+              <h3 className='cart-name'>{val.product_name} </h3>
+              <h3 className='cart-price'>Total Price: {val.totalPrice.toFixed(3)} KWD  </h3>
+              <button onClick={() =>
+                dispatch(removeItem(val.id))} className='remove-btn'>Remove </button>
+              </Col>
+            </Row>
+          
+          
+          
+          </div>
+        )
+      })}
+      {/* </div> */}
+   
+      
     </div>
   )
 }
