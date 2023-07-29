@@ -1,0 +1,61 @@
+.main{
+    background-color: black;
+    margin-top: 20px;
+    color: aliceblue;
+}
+.first{
+    margin-top: 34px;
+    font-size: 15px;
+}
+
+.second{
+    margin-top: 48px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+.second h4 {
+    color:#fc7c00 ;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.third{
+    margin-top: 48px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+.third h4 {
+    color:#fc7c00 ;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.fourth{ 
+    margin-top: 48px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+.fourth h4{
+    color:#fc7c00 ;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.Information{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.Categories{
+    margin-top: 15px;
+}
+.Service{
+    margin-top: 15px;
+}
+
+.footer {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-img {
+    width: 10rem;
+    margin-top: 30px;
+}

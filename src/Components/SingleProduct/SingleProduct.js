@@ -65,7 +65,10 @@ function SingleProduct() {
         <h1 className='single-product-name'>{val.product_name} </h1>
         <h2 className='single-price' style={{ textDecoration: "line-through" }}>KWD ${val.product_price.toFixed(3)}/- </h2>
         <h2 className='single-price-offer'>KWD ${val.product_price_offer.toFixed(3)}/- </h2>
-       <Link to='/cart'><Button className='single-cart-btn' onClick={() => {addToCartHandler(val)}} variant='dark'>Add To Cart</Button></Link> 
+       <Link to='/cart' style={{textDecoration:'none', display:"flex"}}>
+        <Button className='single-cart-btn' onClick={() => {addToCartHandler(val)}} variant='dark'>
+            Add To Cart</Button>
+            </Link> 
         </div>
         <div className='cart-btn-grp'>
         <Button variant='dark' onClick={decreaseProductQty}>-</Button>

@@ -75,10 +75,6 @@ button.cart-btn1 {
     flex-direction: column;
 }
 
-button.single-cart-btn {
-   display: flex;
-   text-decoration: none;
-}
 
 .cart-btn-grp {
     display: flex;

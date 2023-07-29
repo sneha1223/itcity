@@ -42,8 +42,7 @@ const Register = () => {
     }
 
     return (
-        <center>
-            {/* <h2>Login </h2> */}
+     
             <div className='register shadow p-5'>
                 <form onSubmit={handleSubmit} className='form-div'>
                     <input
@@ -77,7 +76,7 @@ const Register = () => {
                     {/* </Link> */}
                 </form>
             </div>
-        </center>
+     
     )
 }
 

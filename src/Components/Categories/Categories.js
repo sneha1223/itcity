@@ -68,8 +68,10 @@ const Categories = () => {
                             <Card.Title className='card-title'><p >{val.product_name}</p></Card.Title>
                             <Card.Text className='offer_price' style={{ textAlign: "center" }}>KWD {val.product_price_offer.toFixed(3)}</Card.Text>
                             <Card.Text className='price' style={{ textAlign: "center", textDecoration: "line-through" }}>KWD {val.product_price.toFixed(3)}</Card.Text>
-                            <div className='btnnnn'>
-                              <Link to='/product/:product_id'><Button className='hidden-button btn1' variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button> </Link>                            </div>
+                            
+                              <Link to='/product/:product_id'>
+                              <Button className='hidden-button view-button'variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button> </Link>                           
+  
                           </Card.Body>
                         </Card>
                       </Link>
@@ -89,13 +91,16 @@ const Categories = () => {
                             <Card.Title>{val.product_name}</Card.Title>
                             <Card.Text className='offer_price' style={{ textAlign: "center" }}>KWD {val.product_price_offer.toFixed(3)}</Card.Text>
                             <Card.Text className='price' style={{ textAlign: "center", textDecoration: "line-through" }}>{val.country}<span style={{ textAlign: "center", textDecoration: "line-through" }}>{val.product_price.toFixed(3)}</span> </Card.Text>
-                            <Button className='hidden-button btn1' variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button>
+                            {/* <Button className='hidden-button btn1' variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button> */}
+                            <Button className='hidden-button view-button'variant='dark' onClick={() => { addToCartHandler(val) }}  >Add to Cart</Button>                            
                           </Card.Body>
                         </Card>
+                      
                       </Link>
                     </div>
                   )
                 })}
+                
               </div>
             )
             }

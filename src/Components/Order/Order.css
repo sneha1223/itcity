@@ -1,0 +1,30 @@
+.shipping {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10;
+    margin: 5px 10px 60px 20px;
+}
+
+.inputs {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.heads {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.order-img {
+    width: 30px;
+}
+
+.button-order {
+    width: 175px;
+    height: 50px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+}

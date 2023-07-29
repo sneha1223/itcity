@@ -1,0 +1,21 @@
+/* Carousel.css */
+.icon-group {
+    margin-top: 20px; /* Add some margin between the carousel and icons (adjust as needed) */
+  }
+  
+  .icon-group .col {
+   
+    text-align: center;
+    margin-bottom: 10px; /* Adjust the vertical gap between icons (you can use margin-top or margin-bottom) */
+  }
+  
+  .icons {
+    width: 50px; /* Adjust the icon width as needed */
+    height: 50px; /* Adjust the icon height as needed */
+    margin: 5px; /* Adjust the margin to reduce the gap between icons */
+  }
+  
+.banr-img {
+  width: 100%;
+}
+  

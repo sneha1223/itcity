@@ -1,0 +1,15 @@
+/* Custom CSS for the search input and icon */
+.search-input {
+    position: relative;
+    padding-right: 2.5rem; /* Add enough padding on the right to accommodate the icon */
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    fill: black;
+    right: 30px; /* Adjust the position of the icon to your preference */
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  

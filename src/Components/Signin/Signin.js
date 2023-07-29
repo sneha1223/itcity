@@ -1,7 +1,6 @@
 import React from 'react'
 import './Signin.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { getToken, login } from '../../Store/authSlice'
 
@@ -26,7 +25,7 @@ const Signin = () => {
     };
 
     return (
-        <center>
+        // <center>
             <div className='sign-div p-4' >
                 <form className='signin-form'onSubmit={handleSubmit}>
                     <input
@@ -51,7 +50,7 @@ const Signin = () => {
         
                 
             </div>
-        </center>
+        // </center>
     )
 }
 
